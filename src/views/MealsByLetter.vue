@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto p-8">
         <div class="flex flex-col p-2 justify-center ">
-            <div class="flex p-2 gap-3 justify-center mx-2">
+            <div class="flex flex-wrap p-2 gap-3 justify-center mx-2">
                 <router-link :to="{name:'byLetter', params:{letter}}" v-for="letter in letters" :key="letter">
                     {{ letter }}
                 </router-link>
@@ -15,7 +15,7 @@
         <div v-if="!meals.length" class="flex justify-center text-gray-950 shadow bg-white">
           There are no meals {{ keyWord }}
         </div>
-        
+
     </div>
  
 </template>
